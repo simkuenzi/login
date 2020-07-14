@@ -1,0 +1,33 @@
+<html th:replace="~{layout.html :: layout(~{::title}, ~{::div})}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<div>
+
+<form method="POST" th:action="@{~/dologin(l=${location})}">
+    <div class="form-row">
+        <div class="form-label"><label for="user">Username</label></div>
+        <div class="form-input">
+            <input id="user" name="httpd_username" type="text" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-label"><label for="password">Password</label></div>
+        <div class="form-input">
+            <input id="password" name="httpd_password" type="password" />
+        </div>
+    </div>
+    <div class="form-row form-row-action">
+        <span class="form-action-message" th:if="${failure}">Invalid username or password</span>
+        <button type="submit" name="login" value="Login">Login</button>
+    </div>
+    <input type="hidden" name="httpd_location" th:value="${location}" />
+</form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+:root {
+    --dark: #78CC5A;
+    --normal: #94FF6F;
+    --light: #CEFFBD;
+    --sec-dark: #348CCC;
+    --sec-normal: #42AFFF;
+}
+
+.comment {
+    color: gray;
+    font-style: italic;
+}
+
+.header {
+    background-color: var(--dark);
+    height: 60px;
+    font-size: 14pt;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.header-title {
+    padding-left: 30px;
+    line-height: 60px;
+    vertical-align: middle;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 50px;
+    background-color: var(--dark);
+    height: 40px;
+    font-size: 14pt;
+    border-radius: 4px;
+}
+
+.version {
+    padding-left: 30px;
+    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+
+.header-user {
+    text-align: right;
+    float: right;
+    padding-right: 30px;
+    line-height: 60px;
+    vertical-align: middle;
+    display: inline-block;
+    color: white;
+ }
+
+
+.header > a {
+    color: white;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.body {
+    text-align: center;
+    font-size: 16pt;
+}
+
+.body > h1 {
+    color: var(--dark);
+}
+
+form {
+    text-align: left;
+    max-width: 1000px;
+    min-width: 700px;
+    display: inline-block;
+}
+
+.form-section {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--dark);
+    padding: 4px;
+    margin: 4px;
+}
+
+.form-label {
+    width: 25%;
+    float: left;
+    margin-top: 6px;
+}
+
+.form-input {
+    width: 75%;
+    float: right;
+    margin-top: 6px;
+    background-color: lightgray;
+    border-radius: 4px;
+}
+
+.form-input-message {
+    padding: 5px;
+    height: 26px;
+    color: white;
+}
+
+.form-input-active {
+    background-color: var(--dark);
+}
+
+.form-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-row-action {
+    text-align: right;
+}
+
+.form-action-message {
+    color: var(--dark);
+    margin-right: 30px;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.tab {
+    background-color: var(--dark);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content-active {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+    background-color: var(--light);
+}
+
+.tab-button-active {
+    background-color: var(--normal);
+}
+
+.tab-button, .tab-button-active {
+    border-radius: 8pt 8pt 0pt 0pt;
+}
+
+
+label {
+    display: inline-block;
+}
+
+input[type=text], input[type=password], textarea, .input, select {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14pt;
+    resize: vertical;
+}
+
+input[type=text], input[type=password], textarea, .input {
+  resize: vertical;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+select {
+  padding: 6px;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 6px;
+  padding: 12px;
+  font-size: 14pt;
+  border: none;
+  color: white;
+  background-color: var(--dark);
+  border-radius: 8pt;
+  font-weight: bold;
+}
+
+button:hover, button:focus {
+  background-color: var(--normal);
+}
+
+button[type=submit] {
+  background-color: var(--sec-dark);
+}
+
+button[type=submit]:hover, button[type=submit]:focus {
+  background-color: var(--sec-normal);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .form-label, .form-input, input[type=submit], button {
+    width: 100%;
+  }
+  .form {
+      width: 100%;
+  }
+  button, input[type=submit], input[type=text], input[type=password], textarea, .input, select, label, body, .form-input-message {
+    font-size: 46pt;
+  }
+  .form-input-message {
+    height: 48pt;
+  }
+  .header, .footer {
+    font-size: 30pt;
+  }
+  .tab-button, .tab-button-active {
+    width: auto;
+  }
+  button[type=submit] {
+    margin-top: 48pt;
+    margin-bottom: 20pt;
+  }
+}
+
