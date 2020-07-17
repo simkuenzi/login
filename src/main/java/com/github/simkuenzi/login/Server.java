@@ -44,7 +44,7 @@ public class Server {
         })
         .start(port)
 
-        .get("/", ctx -> ctx.render("login.html", Map.of(
+        .get("/", ctx -> ctx.render(ctx.queryParamMap().containsKey("a") ? "anon.html" : "login.html", Map.of(
                 "location", Objects.requireNonNull(ctx.queryParam("l", "/")),
                 "failure", ctx.queryParamMap().containsKey("f"),
                 "version", versionProps.getProperty("version"))));

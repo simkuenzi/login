@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+
+<form method="POST" th:action="@{~/doAnonLogin(l=${location})}">
+    <input id="user" name="httpd_username" type="hidden" value="anon" />
+    <input id="password" name="httpd_password" type="hidden" value="anon" />
+    <input type="hidden" name="httpd_location" th:value="${location}" />
+    <a onclick="document.forms[0].submit()" href="#">Continue</a>
+</form>
+
+<script>
+    document.forms[0].submit();
+</script>
+
+</body>
+</html>
